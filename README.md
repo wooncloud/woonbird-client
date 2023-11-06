@@ -1,38 +1,18 @@
-# create-svelte
+# woonbird
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![woonbird Logo](<Add Your Logo URL Here>)
 
-## Creating a project
+**woonbird**는 wooncloud의 하위 프로젝트 중 하나로, woonbird 웹 앱의 클라이언트를 담당하는 리포지토리입니다. 이 프로젝트는 Node.js를 사용한 공부용 프로젝트로, Twitter를 카피하는 연습 프로젝트로 시작되었습니다.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 기술 스택
+- 데이터베이스: [Supabase](https://supabase.io/), PostgreSQL
+- 백엔드 서버: [Node.js](https://nodejs.org/), [Express](https://expressjs.com/)
+- 프론트엔드 프레임워크: [SvelteKit](https://kit.svelte.dev/)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## 관련 프로젝트
+- woonbird API 서버 프로젝트: [wooncloud/woonbird](https://github.com/wooncloud/woonbird)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## 현재 상황
+현재 상황은 다음과 같습니다:
+- 사용자 회원가입, 로그인, 로그아웃 기능이 이미 구현되어 있습니다.
+- 현재는 "home" 페이지를 만들고 있는 중입니다.
