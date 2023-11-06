@@ -1,7 +1,5 @@
 # woonbird
 
-![woonbird Logo](<Add Your Logo URL Here>)
-
 **woonbird**는 wooncloud의 하위 프로젝트 중 하나로, woonbird 웹 앱의 클라이언트를 담당하는 리포지토리입니다. 이 프로젝트는 Node.js를 사용한 공부용 프로젝트로, Twitter를 카피하는 연습 프로젝트로 시작되었습니다.
 
 ## 기술 스택
