@@ -31,7 +31,7 @@
 	}
 
 	function handleRegister() {
-			goto('/register');
+			goto('/user/register');
 	}
 
 	// Toast 메시지를 닫는 함수

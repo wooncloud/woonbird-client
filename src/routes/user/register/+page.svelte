@@ -51,7 +51,7 @@
 	}
 
 	function handleLogin() {
-			goto('/login');
+			goto('/user/login');
 	}
 
 	// Toast 메시지를 닫는 함수
