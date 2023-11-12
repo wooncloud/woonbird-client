@@ -39,74 +39,20 @@
     image = '';
     modal = false;
   }
-
-  async function logout() {
-        await api.post(`/user/logout`);
-        goto('/user/login');
-    }
 </script>
 
 <style>
-  section {
-    display: flex;
-  }
-
-  /* some custom styles */
-  .profile {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-
   .input-group {
     margin-bottom: 10px;
-  }
-
-  /* add some styles for the sidebar */
-  .sidebar {
-    position: sticky;
-    top: 20px;
-    width: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .sidebar button {
-    margin: 10px;
   }
 </style>
 
 <div class="container">
-  <section>
-    <!-- add a sidebar element -->
-    <div class="sidebar">
-      <!-- add a write button -->
-      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#writeModal">
-        글쓰기
-      </button>
-      <!-- add a profile button -->
-      <button class="btn btn-secondary" on:click={() => location.href = '/user/me'}>
-        프로필
-      </button>
-      <button class="btn btn-secondary" on:click={logout}>로그아웃</button>
-    </div>
-
-    <!-- timeline -->
-    <div class="timeline">
-      {#each $posts as post}
-        <TimelinePost {post} />
-      {/each}
-    </div>
-  </section>
+  <div class="timeline">
+    {#each $posts as post}
+      <TimelinePost {post} />
+    {/each}
+  </div>
 
   <!-- modal -->
   <div class="modal fade" id="writeModal" tabindex="-1" aria-labelledby="writeModalLabel" aria-hidden="true">

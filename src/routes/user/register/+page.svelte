@@ -61,6 +61,10 @@
 </script>
 
 <section class="d-flex flex-column justify-content-center align-items-center vh-100">
+	<div class="mb-3">
+		<h1 class="text-primary">woonbird</h1>
+		<h3 class="d-flex justify-content-center">회원가입</h3>
+	</div>
 	<form on:submit|preventDefault={register} class="d-flex flex-column align-items-center">
 			<label class="mb-3">
 					아이디:

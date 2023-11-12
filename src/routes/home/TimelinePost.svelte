@@ -1,9 +1,8 @@
 <script>
-  export let post; // a prop to receive the post object
+  export let post;
 </script>
 
 <style>
-  /* some custom styles */
   .post {
     display: flex;
     align-items: flex-start;
@@ -27,6 +26,7 @@
   .post-title {
     font-weight: bold;
     margin-bottom: 5px;
+    cursor: pointer; /* add this */
   }
 
   .post-body {
@@ -38,18 +38,28 @@
     height: auto;
     border-radius: 10px;
   }
+
+  .post-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
 </style>
 
 <div class="post">
   <img src="https://i.pravatar.cc/50?u={post.userId}" alt="user" />
   <div class="post-content">
-    <p class="post-title">{post.title}</p>
+    <p class="post-title" on:click={() => location.href = `/post/${post.id}`}>{post.title}</p>
     <div class="post-body">
       {#if post.body.startsWith('http')}
         <img src={post.body} alt="image" />
       {:else}
         <p>{post.body}</p>
       {/if}
+    </div>
+    <div class="post-buttons">
+      <button class="post-button btn btn-secondary">좋아요</button>
+      <button class="post-button btn btn-success">수정하기</button>
     </div>
   </div>
 </div>

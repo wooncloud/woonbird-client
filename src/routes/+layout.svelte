@@ -1,17 +1,20 @@
 <script>
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  import bs from 'bootstrap/dist/js/bootstrap.min.js?url';
+  import bsBundle from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
 </script>
+<svelte:head>
+  <script src={bs}></script>
+  <script src={bsBundle}></script>
+</svelte:head>
 
 <div class="app">
 	<main>
 		<slot />
 	</main>
-
-	<footer>
-	</footer>
 </div>
 
 <style>
-  /* add some styles for the layout */
   .app {
     display: flex;
     flex-direction: column;
@@ -20,21 +23,14 @@
 
   main {
     flex: 1;
-    max-width: 768px; /* set the maximum width to 768px */
-    margin: 0 auto; /* center the main content */
-    padding: 20px; /* add some padding */
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  footer {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* use media queries to adjust the layout for mobile screens */
   @media (max-width: 768px) {
     main {
-      padding: 10px; /* reduce the padding */
+      padding: 10px;
     }
   }
 </style>

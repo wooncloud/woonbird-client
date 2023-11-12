@@ -2,11 +2,11 @@
 	import { goto } from '$app/navigation';
 
 	function handleLogin() {
-			goto('/login');
+			goto('/user/login');
 	}
 
 	function handleRegister() {
-			goto('/register');
+			goto('/user/register');
 	}
 </script>
 

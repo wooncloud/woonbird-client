@@ -41,6 +41,10 @@
 </script>
 
 <section class="d-flex flex-column justify-content-center align-items-center vh-100">
+	<div class="mb-3">
+		<h1 class="text-primary">woonbird</h1>
+		<h3 class="d-flex justify-content-center">로그인</h3>
+	</div>
 	<form on:submit|preventDefault={login} class="d-flex flex-column align-items-center">
 			<label class="mb-3">
 					아이디:
@@ -59,12 +63,12 @@
 	<!-- Toast 메시지 -->
 	{#if showToast}
 			<div class="toast align-items-center text-white bg-danger border-0" style="position: absolute; top: 0; right: 0;" role="alert" aria-live="assertive" aria-atomic="true">
-					<div class="d-flex">
-							<div class="toast-body">
-									{errorMessage}
-							</div>
-							<button type="button" class="btn-close btn-close-white me-2 m-auto" on:click={closeToast} aria-label="Close"></button>
-					</div>
+				<div class="d-flex">
+						<div class="toast-body">
+								{errorMessage}
+						</div>
+						<button type="button" class="btn-close btn-close-white me-2 m-auto" on:click={closeToast} aria-label="Close"></button>
+				</div>
 			</div>
 	{/if}
 </section>
