@@ -36,7 +36,7 @@
 
 				if (response.status === 200) {
 						alert(response.data.message);
-						goto('/login');
+						goto('/user/login');
 				} else {
 						errorMessage = '회원가입에 실패했습니다. 입력한 정보를 확인해주세요.';
 						console.error(response.data.message);
